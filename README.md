@@ -95,7 +95,11 @@ La empresa “El correo de Yury” esta comenzando a entrar al mercado, y se ha 
 
 [Video para crear una interfaz grafica con Qt Designer](https://www.youtube.com/watch?v=DpSerOAZR9w&t=95s&ab_channel=Errodringer)
 
+## Pa la proxima clase
 
+merge
+perfilamiento
+probar conexion a la base de datos
 
 ```python
 print("Hello World!)
