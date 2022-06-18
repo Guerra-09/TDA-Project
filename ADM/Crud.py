@@ -1,0 +1,3 @@
+
+def actualizarDatos(self, rut, nombre, apellido_paterno, apellido_materno, segundo_nombre, direccion, telefono, correo, Cargo):
+    sql = f"UPDATE rut, nombre, apellido_paterno, apellido_materno, segundo_nombre, direccion, telefono, correo, Cargo SET rut = {self.rut}, {self.nombre}, {self.apellido_paterno}, {self.apellido_materno}, {self.segundo_nombre}, {self.direccion}, {self.telefono}, {self.correo}, {self.Cargo}"
