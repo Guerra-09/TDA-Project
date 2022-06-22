@@ -1,3 +1,28 @@
+from Conectar import Connect
 
-def actualizarDatos(self, rut, nombre, apellido_paterno, apellido_materno, segundo_nombre, direccion, telefono, correo, Cargo):
-    sql = f"UPDATE rut, nombre, apellido_paterno, apellido_materno, segundo_nombre, direccion, telefono, correo, Cargo SET rut = {self.rut}, {self.nombre}, {self.apellido_paterno}, {self.apellido_materno}, {self.segundo_nombre}, {self.direccion}, {self.telefono}, {self.correo}, {self.Cargo}"
+
+class Usuario:
+    def __init__(self, rut, nombre, apePat, apeMat, segundo_nombre, direccion , telefono, correo, Cargo) -> None:
+        self.rut = rut
+        self.nombre = nombre
+        self.apePat = apePat
+        self.apeMat = apeMat
+        self.segundo_nombre = segundo_nombre
+        self.direccion = direccion
+        self.telefono = telefono
+        self.correo = correo
+        self.Cargo = Cargo
+        self.conectar = Connect()
+
+    def actualizarDatos(self):
+        sql = f"UPDATE rut, nombre, apellido_paterno, apellido_materno, segundo_nombre, direccion, telefono, correo, Cargo SET rut = {self.rut, self.nombre, self.apePat, self.apeMat, self.segundo_nombre, self.direccion, self.telefono, self.correo, self.Cargo}"
+        msj = self.conectar.ejecutar(sql)
+
+        if msj == 1:
+            return "Datos Actualizados"
+        if msj == 0:
+            return "Error. Verifique si lo datos esten bien. o contacte con su administrador!"
+
+        return msj
+        
+
