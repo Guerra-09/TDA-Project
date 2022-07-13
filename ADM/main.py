@@ -4,7 +4,7 @@
 
 #class Gui(QMainWindow):
 
-    #def __init__(self) -> None:
+#def __init__(self) -> None:
        #super(Gui,self).__init__()
        #uic.loadUi("QtDesiginer.ui", self)
        #self.show()
