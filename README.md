@@ -88,6 +88,10 @@ La empresa “El correo de Yury” esta comenzando a entrar al mercado, y se ha 
 
 - ``` pip3 install pyinstaller ```
 
+- ``` pip3 install pymysql ```
+
+
+
 - [Qt Desginer](https://build-system.fman.io/qt-designer-download) <- Crear interfaces graficas con unos pocos clicks!
 
 ## Tutoriales y documentacion
