@@ -40,6 +40,8 @@ print(ent_priv.mostrarDatos())
 
 adm = input('''''')
 
+        
+
 
 
 

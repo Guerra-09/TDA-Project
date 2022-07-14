@@ -1,6 +1,5 @@
 import mysql.connector
 
-
 class Connect:
 
     def __init__(self) -> None:
@@ -41,4 +40,5 @@ class Connect:
             return lista
         except mysql.connector.Error as e:
             return "Error" +str(e)
+
 

@@ -11,11 +11,11 @@ class Usuario:
         self.direccion = direccion
         self.telefono = telefono
         self.correo = correo
-        self.Cargo = Cargo
+        self.cargo = Cargo
         self.conectar = Connect()
 
     def actualizarDatos(self):
-        sql = f"UPDATE rut, nombre, apellido_paterno, apellido_materno, segundo_nombre, direccion, telefono, correo, Cargo SET rut = {self.rut, self.nombre, self.apePat, self.apeMat, self.segundo_nombre, self.direccion, self.telefono, self.correo, self.Cargo}"
+        sql = f"UPDATE nombre, apellido_paterno, apellido_materno, segundo_nombre, direccion, telefono, correo, Cargo SET rut = {self.nombre, self.apePat, self.apeMat, self.segundo_nombre, self.direccion, self.telefono, self.correo, self.cargo}"
         msj = self.conectar.ejecutar(sql)
 
         if msj == 1:
@@ -24,5 +24,16 @@ class Usuario:
             return "Error. Verifique si lo datos esten bien. o contacte con su administrador!"
 
         return msj
+    
+    def mostrarDatos(self):
+        sql = f"SELECT * FROM persona WHERE rut = {self.rut}"
+        msj = self.conectar.listarTodos(sql)
+
+        if msj == 1:
+            return "Successfully exit!."
+        if msj == 0:
+            return "Error. Verifique si lo datos esten bien. o contacte con su administrador!"
+
+
         
 
