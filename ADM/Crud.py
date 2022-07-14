@@ -24,6 +24,7 @@ class Usuario:
             return "Error. Verifique si lo datos esten bien. o contacte con su administrador!"
 
         return msj
+<<<<<<< HEAD
     
     def mostrarDatos(self):
         sql = f"SELECT * FROM persona WHERE rut = {self.rut}"
@@ -34,6 +35,19 @@ class Usuario:
         if msj == 0:
             return "Error. Verifique si lo datos esten bien. o contacte con su administrador!"
 
+=======
+
+    def mostrarDatos(self):
+        sql = f"SELECT * FROM Empleado WHERE rut = {self.rut}"
+        msj = self.conectar.listarTodos(sql)
+
+        if msj == 1:
+            return "Datos Actualizados"
+        if msj == 0:
+            return "Error. Verifique si lo datos esten bien. o contacte con su administrador!"
+
+        return msj
+>>>>>>> 682432bceb5068e78a3fec568956dd9b4c790ef9
 
         
 
