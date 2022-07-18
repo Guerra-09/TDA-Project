@@ -1,4 +1,3 @@
-from ast import Import
 import mysql.connector
 
 class Connect:
@@ -9,7 +8,8 @@ class Connect:
                     host = 'localhost',
                     user = 'root',
                     password = 'diego2015',
-                    database = 'correo_yuri'
+                    database = 'correo_yury',
+                    port="3306"
                 )  
 
         self.__cursor = self.__database.cursor()

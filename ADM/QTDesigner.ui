@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,6 +19,23 @@
     <height>600</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+    <underline>false</underline>
+    <strikeout>false</strikeout>
+    <stylestrategy>PreferDefault</stylestrategy>
+    <kerning>false</kerning>
+   </font>
+  </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
   </property>
@@ -23,33 +43,22 @@
    <bool>false</bool>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Iniciar Sesion</string>
+  </property>
+  <property name="toolTip">
+   <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/Login.jpg&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;
-border-color: rgb(0, 0, 0);</string>
+   <string notr="true">QWidget#centralwidget{
+border-image: url(:/images/Login.jpg);
+font: 8pt &quot;Palatino Linotype&quot;;
+}
+</string>
   </property>
   <property name="animated">
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>801</width>
-      <height>731</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(72, 148, 189, 255), stop:0.323864 rgba(0, 92, 106, 255), stop:0.664773 rgba(81, 94, 135, 255), stop:1 rgba(0, 0, 0, 255));
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(72, 148, 189, 255), stop:0.323864 rgba(0, 92, 106, 255), stop:0.693182 rgba(57, 71, 113, 255), stop:1 rgba(0, 0, 0, 255));</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="input_name">
     <property name="geometry">
      <rect>
@@ -62,6 +71,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb
     <property name="styleSheet">
      <string notr="true">border-color: rgb(0, 0, 0);
 font: 87 8pt &quot;Arial Black&quot;;</string>
+    </property>
+    <property name="maxLength">
+     <number>12</number>
     </property>
     <property name="placeholderText">
      <string>Usuario</string>
@@ -76,11 +88,21 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="mouseTracking">
      <bool>true</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 10pt &quot;Arial&quot;;
+color: rgb(255, 255, 255);
 
 </string>
     </property>
@@ -109,6 +131,11 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
       <height>16777215</height>
      </size>
     </property>
+    <property name="font">
+     <font>
+      <italic>false</italic>
+     </font>
+    </property>
     <property name="text">
      <string>Login</string>
     </property>
@@ -127,6 +154,9 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
       <width>81</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Contraseña&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -149,6 +179,12 @@ font: 87 8pt &quot;Arial Black&quot;;</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="maxLength">
+     <number>255</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
     <property name="readOnly">
      <bool>false</bool>
@@ -211,6 +247,9 @@ color: rgb(0, 0, 127);</string>
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Rut&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
@@ -224,6 +263,8 @@ color: rgb(0, 0, 127);</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Gui/imagenes/res.qrc"/>
+ </resources>
  <connections/>
 </ui>
