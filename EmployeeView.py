@@ -13,17 +13,8 @@ class EmployeeView(QMainWindow):
         
         self.db_manager = DataBase()
         super(EmployeeView, self).__init__()
-        uic.loadUi("LoginView.ui", self)
+        uic.loadUi("employeeView.ui", self)
         
-        self.b_login.clicked.connect(self.verify_login)
-    
-    def verify_login(self):
-        if self.db_manager.user_exist(self.input_rut.text(), self.input_password.text()):
-            if self.db_manager.user_type(self.input_rut.text(), self.input_password.text()) == 1:
-                self.login_rh_signal.emit()
-            else:
-                self.login_employee_signal.emit()
-        else:
-            self.input_rut.setText("Usuario Invalido")
+        
 
         

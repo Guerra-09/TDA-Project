@@ -4,9 +4,9 @@ class DataBase:
     def __init__(self):
         self.connection = pymysql.connect(
             host='localhost',
-            user='Guerra',
+            user='root',
             password='123456789',
-            db='trabajo_yury'
+            db='correo_yury'
         )
         
         self.cursor = self.connection.cursor()
@@ -43,4 +43,4 @@ if __name__ == '__main__':
 
     # for element in database.show_log_action():
     #     print(f"id: {element[0]}, description: {element[1]}")
-    print(database.user_type('20918450', '12345fesf6789'))
+    print(database.user_exist('123', '321'))

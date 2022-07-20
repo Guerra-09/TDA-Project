@@ -19,6 +19,7 @@ class LoginView(QMainWindow):
     
     def verify_login(self):
         if self.db_manager.user_exist(self.input_rut.text(), self.input_password.text()):
+            print("existe")
             if self.db_manager.user_type(self.input_rut.text(), self.input_password.text()) == 1:
                 self.login_rh_signal.emit()
             else:
