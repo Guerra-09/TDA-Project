@@ -14,6 +14,10 @@ class Persona():
         self.telefono = telefono
         self.correo = correo
         self.cargo = cargo
+    
+    def mostrarDatosPersona(self):
+        txt = "{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}"
+        return txt.format(self.ID_persona, self.rut, self.nombre, self.nombre_2, self.apePat, self.apeMat, self.direccion, self.telefono, self.correo, self.cargo)
 
 class Jefe_RR_HH(Persona):
 
@@ -22,23 +26,43 @@ class Jefe_RR_HH(Persona):
 
         self.ID_ADM = ID_ADM
     
-    def addADM(self, account):
-        pass
+    #def addADM(self, account):
+        #pass
 
     def mostrarDatos(self):
         txt = "{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}"
         return txt.format(self.ID_persona , self.rut, self.nombre, self.nombre_2, self.apePat, self.apeMat, self.direccion, self.telefono, self.correo, self.cargo, self.ID_ADM)
         
-        
+class ListaAdm:
+    #~ Array de administradores
+    Adm_account = []
+
+    def agregarAdm(self, add):
+        #Agregando a array Adm_count 
+        self.Adm_account.append(add)
+    
+    def mostrarAdd(self):
+        for i in self.Adm_account:
+            print(i)
+
+
+#Instanciando con variables
+
 ent_priv= Jefe_RR_HH(1, 221456456-6,"Juan", "Gutierrez", "Salazar", "Sebastian", "Linea-1", 981457345, "@gmail.com", "ADMNISTRADOR", 111)
 
-prs = Persona(1, 901456456-6,"Luis", "Enrique", "Muñoz", "Jorge", "Linea-2", 917777345, "@gmail.com","EMPLEADO")
+prs= Persona(1, 901456456-6,"Luis", "Enrique", "Muñoz", "Jorge", "Linea-2", 917777345, "@gmail.com","EMPLEADO")
 
-#ent_priv.addADM(ent_priv)
+lista = ListaAdm()
 
+#Pruebas
 print(ent_priv.mostrarDatos())
+print(prs.mostrarDatosPersona())
+
+lista.agregarAdm(ent_priv)
+lista.mostrarAdd()
 
 adm = input('''''')
+
 
         
 
