@@ -12,7 +12,7 @@ class EmployeeView(QMainWindow):
         
         self.db_manager = DataBase()
         super(EmployeeView, self).__init__()
-        uic.loadUi("TDA-Project/employeeView.ui", self)
+        uic.loadUi("employeeView.ui", self)
         
         
 

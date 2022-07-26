@@ -14,17 +14,17 @@ class AdminView(QMainWindow):
         super(AdminView, self).__init__()
         uic.loadUi("adminView.ui", self)
         self.pushButton_2.clicked.connect(self.crear_employee)
-        self.tableWidget.setRowCount(40)
+        self.tableWidget.setRowCount(10000)
         self.update_table()
     
     def update_table(self):
         results = self.db_manager.users()
         tableRow = 0
         for row in results:
-            sexo = "Hombre"
+            sexo = "Mujer"
 
             if row[3] == 1:
-                sexo = "Mujer"
+                sexo = "Hombre"
 
             self.tableWidget.setItem(tableRow, 0, QTableWidgetItem(row[0]))
             self.tableWidget.setItem(tableRow, 1, QTableWidgetItem(row[1]))
